@@ -10,6 +10,7 @@ body {
 h1 {
     margin-top: 40px;
     font-size: 50px;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 h1, h2, h3, p {
@@ -37,7 +38,6 @@ h3 {
 }
 
 .info-box * {
-    width: 100%;
     text-align: center;
 }
 
@@ -54,8 +54,6 @@ h3 {
     font-size: 4em;
     padding-top: 45px;
     color: aliceblue;
-
-
 }
 
 .input-container {
@@ -92,3 +90,28 @@ input {
         transform: scale3d(1.08, 1.08, 1.08);
     }
 }
+
+@media only screen and (max-width: 667px) {
+    .info-box {
+        width: 90px;
+    }
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+    .far, .fas {
+        font-size: 2em;
+        padding-top: 25px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    input {
+        width: 65%;
+    }
+    h2, p {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+}
+
