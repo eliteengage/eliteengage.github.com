@@ -51,11 +51,25 @@
     </div>
 
     <div class="input-container">
-      <input type="text" name="" value="" placeholder="Enter your email">
+      <input id="email-input" type="text" name="" value="" placeholder="Enter your email">
+      <button type="button" name="button" id="submit-button">Submit</button>
     </div>
 
     <script type="text/javascript">
+      window.onload = () => {
+        const button = document.getElementById('submit-button');
+        const input = document.getElementById('email-input');
 
+        button.onclick = () => {
+          const url = 'https://engage-email-list.herokuapp.com/';
+
+          return fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({ email: input.value })
+          })
+            .then(response => response.json());
+        }
+      }
     </script>
   </body>
 </html>
