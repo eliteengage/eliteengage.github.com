@@ -64,9 +64,6 @@
           const url = 'https://engage-email-list.herokuapp.com/';
 
           return fetch(url, {
-            headers: {
-              mode: 'no-cors'
-            },
             method: 'POST',
             body: JSON.stringify({ email: input.value })
           })
