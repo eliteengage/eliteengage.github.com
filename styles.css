@@ -9,11 +9,20 @@ body {
 
 h1 {
     margin-top: 40px;
-    font-size: 50px;
+    font-size: 60px;
     font-family: "Nunito Sans", sans-serif;
+    text-align: center;
+    color: #009FFD;
+    text-shadow: 2px 2px 4px #ffffff;
 }
 
-h1, h2, h3, p {
+h1 span {
+    font-style: italic;
+    color: #27CFF7;
+    font-size: 60px;
+}
+
+h2, h3, p {
     text-align: center;
     color: #57656F;
     text-shadow: 2px 2px 4px #ffffff;
@@ -53,7 +62,7 @@ h3 {
 .far, .fas {
     font-size: 4em;
     padding-top: 45px;
-    color: aliceblue;
+    color: #ffffff;
 }
 
 .input-container {
@@ -61,10 +70,13 @@ h3 {
     justify-content: center;
 }
 input {
+    font-size: 15px;
     width: 40%;
-    height: 25px;
+    height: 35px;
     border-radius: 3px;
-    border-bottom: 2px solid #89E0F5;
+    border-bottom: 3px solid #89E0F5;
+    padding-left: 15px;
+    margin-top: 20px;
 }
 
 @-webkit-keyframes pulse {
@@ -93,7 +105,9 @@ input {
 
 @media only screen and (max-width: 667px) {
     .info-box {
-        width: 90px;
+        width: 125px;
+        display: flex;
+        justify-content: space-around;
     }
     .icon {
         width: 80px;
@@ -105,6 +119,9 @@ input {
     }
     h3 {
         font-size: 14px;
+    }
+    h3:nth-child(3) {
+        padding-right: 15px;
     }
     input {
         width: 65%;
