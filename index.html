@@ -12,19 +12,9 @@
 
   </head>
   <body>
-    <h1>Elite Engage</h1>
+  <h1><span>Elite</span>Engage</h1>
     <h2>The all inclusive platform to boost your Instagram engagement!</h2>
     <div class="info">
-      <div class="info-box">
-        <div class="">
-          <div class="icon">
-            <i class="far fa-heart"></i>
-          </div>
-          <div class="">
-            <h3>Get Likes!</h3>
-          </div>
-        </div>
-      </div>
       <div class="info-box">
         <div class="">
           <div class="icon">
@@ -32,6 +22,16 @@
           </div>
           <div class="">
             <h3>Get Comments!</h3>
+          </div>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="">
+          <div class="icon">
+            <i class="far fa-heart"></i>
+          </div>
+          <div class="">
+            <h3>Get Likes!</h3>
           </div>
         </div>
       </div>
@@ -51,8 +51,7 @@
     </div>
 
     <div class="input-container">
-      <input id="email-input" type="text" name="" value="" placeholder="Enter your email">
-      <button type="button" name="button" id="submit-button">Submit</button>
+      <input type="text" name="" value="" placeholder="Enter your email">
     </div>
 
     <script type="text/javascript">
@@ -64,9 +63,7 @@
           const url = 'https://engage-email-list.herokuapp.com/';
 
           return fetch(url, {
-            headers: {
-              'content-type': 'application/json'
-            },
+            mode: 'no-cors',
             method: 'POST',
             body: JSON.stringify({ email: input.value })
           })
