@@ -68,6 +68,7 @@ h3 {
 .input-container {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 input {
     font-size: 15px;
@@ -76,7 +77,49 @@ input {
     border-radius: 3px;
     border-bottom: 3px solid #89E0F5;
     padding-left: 15px;
-    margin-top: 20px;
+}
+
+button#submit-button {
+    width: 10%;
+    height: 35px;
+    width: 10%;
+    height: 42px;
+    border-bottom: 3px solid #89E0F5;
+    margin-left: 15px;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    font-size: 15px;
+    color: gray;
+    background-color: #ffffff;
+}
+
+button#submit-button:hover {
+    color: #89E0F5;
+}
+
+.privacy-policy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.privacy-policy ul {
+    list-style: none;
+    display: flex;
+}
+
+.privacy-policy a {
+    text-decoration: none;
+    color: #009FFD;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.privacy-policy a:hover {
+    color: #27CFF7;
 }
 
 @-webkit-keyframes pulse {
@@ -123,12 +166,19 @@ input {
     h3:nth-child(3) {
         padding-right: 15px;
     }
+
     input {
-        width: 65%;
+        width: 58%;
+    }
+    button#submit-button {
+        width: 20%
     }
     h2, p {
         padding-left: 20px;
         padding-right: 30px;
+    }
+    .privacy-policy ul {
+        margin-right: 50px;
     }
 }
 
