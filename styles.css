@@ -1,7 +1,8 @@
 body {
     min-width: 300px;
+    min-height: 650px;
+    position: relative;
     margin: 0;
-    border: 0;
     height: 100vh;
     width: 100vw;
     font-family: 'Roboto Condensed', sans-serif;
@@ -184,3 +185,8 @@ button#submit-button:hover {
     }
 }
 
+.error-container {
+  color: red;
+  padding: 15px;
+  text-align: center;
+}
