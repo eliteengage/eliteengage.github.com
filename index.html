@@ -10,6 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134192019-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-134192019-1');
+    </script>
   </head>
   <body>
   <h1><span>Elite</span>Engage</h1>
@@ -75,16 +84,24 @@
         const button = document.getElementById('submit-button');
         const input = document.getElementById('email-input');
         const errorMessage = document.getElementById('error-message');
+        const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i;
 
         button.onclick = () => {
           const url = 'https://engage-email-list.herokuapp.com/';
+          const email = input.value.trim();
+          const match = email.match(emailRegex);
+
+          if (match === null) {
+            errorMessage.innerText = 'Email invalid. Please ensure your email is in valid format.'
+            return;
+          }
 
           return fetch(url, {
             headers: {
               'content-type': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify({ email: input.value })
+            body: JSON.stringify({ email: email })
           })
             .then(response => response.json())
             .then(json => {
@@ -95,6 +112,10 @@
               console.log('FAILED TO FETCH', error);
               errorMessage.innerText = 'An error has occurred while signing up. Please try again.'
             });
+        };
+
+        input.oninput = () => {
+          errorMessage.innerText = '';
         }
       }
     </script>
