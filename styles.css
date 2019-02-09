@@ -180,6 +180,10 @@ button#submit-button:hover {
         font-size: 2em;
         padding-top: 25px;
     }
+    h1 {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
     h3 {
         font-size: 14px;
     }
